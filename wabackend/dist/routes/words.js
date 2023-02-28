@@ -5,7 +5,7 @@ const router = new (0, _express.Router)();
 
 router.get("/", _Words2.default.index);
 router.get("/:id", _Words2.default.search);
-router.put("/", _Words2.default.edit);
+router.put("/:id", _Words2.default.edit);
 router.post("/", _Words2.default.insert);
 router.delete("/:id", _Words2.default.delete);
 

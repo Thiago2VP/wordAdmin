@@ -25,9 +25,9 @@ class WordsModel {
     return data;
   }
 
-  async edit(body) {
+  async edit(name, body) {
     const collection = await this.connect();
-    const data = await collection.updateOne({ Platform: body.Platform }, { $set: body });
+    const data = await collection.updateOne({ Platform: name }, { $set: body });
     return data;
   }
 

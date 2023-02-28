@@ -5,7 +5,7 @@ const router = new Router();
 
 router.get("/", wordsController.index);
 router.get("/:id", wordsController.search);
-router.put("/", wordsController.edit);
+router.put("/:id", wordsController.edit);
 router.post("/", wordsController.insert);
 router.delete("/:id", wordsController.delete);
 

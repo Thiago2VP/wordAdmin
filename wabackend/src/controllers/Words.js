@@ -14,7 +14,8 @@ class Words {
 
   async edit(req, res) {
     const { Platform, email, password } = req.body;
-    const result = await WordsModel.edit({ Platform, email, password });
+    const name = req.params.id;
+    const result = await WordsModel.edit(name, { Platform, email, password });
     res.send(result);
   }
 
